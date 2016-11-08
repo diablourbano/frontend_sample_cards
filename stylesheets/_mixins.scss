@@ -1,0 +1,37 @@
+@mixin card-shadow {
+  -moz-box-shadow: 0px 4px 6px -2px var(--clippy-color);
+  -webkit-box-shadow: 0px 4px 6px -2px var(--clippy-color);
+  box-shadow: 0px 4px 6px -2px var(--clippy-color);
+}
+
+@mixin clippy-border($width: 8px) {
+  border: solid $width var(--clippy-color);
+}
+
+@mixin clippy-ending($height, $width, $left, $top) {
+  @include clippy-border;
+
+  border-top: none;
+  border-radius: 0 0 var(--clippy-radius) var(--clippy-radius);
+  content: '';
+  position: absolute;
+  height: $height;
+  margin-left: $left;
+  top: $top;
+  width: $width;
+}
+
+@mixin clippy-eye($animation, $left, $rotation) {
+  @include clippy-eye-initial-rotate($rotation);
+
+  animation: $animation 2.5s infinite ease-in-out;
+  left: $left;
+}
+
+@mixin clippy-eye-initial-rotate($rotation) {
+  transform: rotate($rotation);
+}
+
+@mixin clippy-eye-rotate-and-translate {
+  transform: rotate(0deg) translateY(-15%) translateX(5%);
+}

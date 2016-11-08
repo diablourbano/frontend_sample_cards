@@ -1,0 +1,30 @@
+@keyframes leftEye {
+  0%, 60% {
+    @include clippy-eye-initial-rotate(-25deg);
+  }
+
+  30% {
+    @include clippy-eye-rotate-and-translate;
+  }
+}
+
+@keyframes rightEye {
+  0%, 60% {
+    @include clippy-eye-initial-rotate(25deg);
+  }
+
+  30% {
+    @include clippy-eye-rotate-and-translate;
+  }
+}
+
+@keyframes blinkEye {
+  0%, 75%, 100% {
+    height: 0px;
+  }
+
+  90% {
+    height: 18px;
+    transform: rotate(-12deg);
+  }
+}
