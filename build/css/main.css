@@ -1,58 +1,38 @@
-/*
-Error: File to import not found or unreadable: main/mixins.
-       Load path: /home/diablo/Developer/diablo/frontend_sample_cards/stylesheets
-        on line 3 of stylesheets/main.scss
+:root {
+  --fg-color: #4c4c4c; }
 
-1: @import 'variables';
-2: @import 'mixins';
-3: @import 'main/mixins';
-4: 
-5: :root {
-6:   --fg-color: #{$dark-gray};
-7: }
-8: 
+body {
+  background: whitesmoke; }
 
-Backtrace:
-stylesheets/main.scss:3
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/tree/import_node.rb:45:in `import'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/tree/import_node.rb:28:in `imported_file'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/tree/import_node.rb:37:in `css_import?'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:313:in `visit_import'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:331:in `block in watch'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
-/home/diablo/.rvm/gems/ruby-2.3.0@sod/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: main/mixins.\A        Load path: /home/diablo/Developer/diablo/frontend_sample_cards/stylesheets\A         on line 3 of stylesheets/main.scss\A \A 1: @import 'variables';\A 2: @import 'mixins';\A 3: @import 'main/mixins';\A 4: \A 5: :root {\A 6:   --fg-color: #{$dark-gray};\A 7: }\A 8: "; }
+ul {
+  list-style: none; }
+  ul li {
+    -moz-display: inline-block;
+    -webkit-display: inline-block;
+    display: inline-block;
+    border-bottom: solid 10px;
+    cursor: pointer;
+    margin: 60px;
+    padding-bottom: 15px;
+    transition: border-bottom .5s ease-in-out; }
+    ul li.bone, ul li.gray-blue, ul li.dark-blue {
+      transition-timing-function: cubic-bezier(0.1, -1.6, 0.2, 0); }
+    ul li.bone {
+      border-bottom-color: #fcfff5; }
+    ul li.creme {
+      border-bottom-color: #d1dbbd; }
+    ul li.gray-blue {
+      border-bottom-color: #91aa9d; }
+    ul li.blue {
+      border-bottom-color: #3e606f; }
+    ul li.dark-blue {
+      border-bottom-color: #193441; }
+    ul li:hover {
+      border-bottom-width: 1px; }
+    ul li span {
+      color: var(--fg-color);
+      font-family: 'Lato', sans-serif;
+      font-size: 82px;
+      font-weight: 300; }
+
+/*# sourceMappingURL=main.css.map */
