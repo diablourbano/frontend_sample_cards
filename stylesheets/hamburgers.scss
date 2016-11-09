@@ -1,0 +1,39 @@
+@import 'variables';
+@import 'mixins';
+
+:root {
+  --card-color: #{$dark-gray};
+  --margin-between-cards: 5px;
+}
+
+body {
+  padding: 0;
+
+  .container {
+    @include display-flex;
+    @include flex-wrap(wrap);
+    @include justify-content(center);
+
+    margin: 100px auto 0;
+    padding: var(--margin-between-cards);
+    width: 40%;
+  }
+}
+
+.card {
+  @include card-shadow;
+
+  background: var(--card-color);
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: var(--margin-between-cards);
+  padding: 50px;
+
+  .line {
+    background: #fff;
+    display: block;
+    height: 5px;
+    margin: 10px auto;
+    width: 50px;
+  }
+}
