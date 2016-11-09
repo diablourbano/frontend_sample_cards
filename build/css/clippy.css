@@ -10,36 +10,34 @@
     transform: rotate(0deg) translateY(-15%) translateX(5%); } }
 @keyframes blinkEye {
   0%, 75%, 100% {
-    height: 0px; }
+    height: 0; }
   90% {
     height: 18px;
     transform: rotate(-12deg); } }
 :root {
-  --clippy-color: #4c4c4c;
-  --card-color: whitesmoke; }
+  --card-color: whitesmoke;
+  --clippy-color: #4c4c4c; }
 
 .card {
-  -moz-box-shadow: 0px 4px 6px -2px #4c4c4c;
-  -webkit-box-shadow: 0px 4px 6px -2px #4c4c4c;
-  box-shadow: 0px 4px 6px -2px #4c4c4c;
+  box-shadow: 0 4px 6px -2px #4c4c4c;
   background: var(--card-color);
   height: 240px;
   left: calc(50% - 100px);
-  top: calc(50% - 120px);
   position: absolute;
+  top: calc(50% - 120px);
   width: 200px; }
 
 .clippy {
-  --clippy-radius: 40px;
-  border: solid 8px var(--clippy-color);
-  border-bottom: none;
   border-radius: var(--clippy-radius) var(--clippy-radius) 0 0;
+  border: solid 8px var(--clippy-color);
+  --clippy-radius: 40px;
+  border-bottom: 0;
   height: 80px;
   margin: 35px auto;
   width: 40px; }
   .clippy::before {
     border: solid 8px var(--clippy-color);
-    border-top: none;
+    border-top: 0;
     border-radius: 0 0 var(--clippy-radius) var(--clippy-radius);
     content: '';
     position: absolute;
@@ -49,7 +47,7 @@
     width: 60px; }
   .clippy::after {
     border: solid 8px var(--clippy-color);
-    border-top: none;
+    border-top: 0;
     border-radius: 0 0 var(--clippy-radius) var(--clippy-radius);
     content: '';
     position: absolute;
@@ -58,13 +56,13 @@
     top: 120px;
     width: 20px; }
   .clippy .eye {
+    border-radius: 50%;
     border: solid 10px var(--clippy-color);
     background: var(--card-color);
-    border-radius: 50%;
-    border-right-color: transparent;
-    border-left-color: transparent;
     border-bottom-color: transparent;
     border-bottom-width: 2px;
+    border-left-color: transparent;
+    border-right-color: transparent;
     height: 29px;
     position: absolute;
     top: 62px;
@@ -79,9 +77,9 @@
   animation: leftEye 2.5s infinite ease-in-out;
   left: 45px; }
 .eye::before {
+  border-radius: 50%;
   animation: blinkEye 2.5s infinite ease-in-out;
   background: var(--clippy-color);
-  border-radius: 50%;
   content: '';
   height: 0;
   left: 9px;
@@ -89,8 +87,8 @@
   top: 15px;
   width: 18px; }
 .eye::after {
-  border: solid 10px var(--clippy-color);
   border-radius: 50%;
+  border: solid 10px var(--clippy-color);
   content: '';
   height: 15px;
   margin-top: 6px;

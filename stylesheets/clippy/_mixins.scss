@@ -5,7 +5,7 @@
 @mixin clippy-ending($height, $width, $left, $top) {
   @include clippy-border;
 
-  border-top: none;
+  border-top: 0;
   border-radius: 0 0 var(--clippy-radius) var(--clippy-radius);
   content: '';
   position: absolute;

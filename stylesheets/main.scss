@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixins';
 @import 'main/mixins';
 
 :root {
@@ -11,11 +12,12 @@ body {
 
 ul {
   list-style: none;
-  
+
   li {
+    @include inline-block;
+
     border-bottom: solid 10px;
     cursor: pointer;
-    display: inline-block;
     margin: 60px;
     padding-bottom: 15px;
     transition: border-bottom .5s ease-in-out;
@@ -23,7 +25,7 @@ ul {
     &.bone,
     &.gray-blue,
     &.dark-blue {
-      @include bouncing-timing;
+      transition-timing-function: cubic-bezier(.1, -1.6, .2, 0);
     }
 
     &.bone {
@@ -51,10 +53,10 @@ ul {
     }
 
     span {
+      color: var(--fg-color);
       font-family: 'Lato', sans-serif;
       font-size: 82px;
       font-weight: 300;
-      color: var(--fg-color);
     }
   }
 }

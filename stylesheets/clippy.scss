@@ -4,8 +4,8 @@
 @import 'clippy/animations';
 
 :root {
-  --clippy-color: #{$dark-gray};
   --card-color: #{$whitesmoke};
+  --clippy-color: #{$dark-gray};
 }
 
 .card {
@@ -14,18 +14,18 @@
   background: var(--card-color);
   height: 240px;
   left: calc(50% - 100px);
-  top: calc(50% - 120px);
   position: absolute;
+  top: calc(50% - 120px);
   width: 200px;
 }
 
 .clippy {
-  --clippy-radius: 40px;
-
+  @include border-radius(var(--clippy-radius) var(--clippy-radius) 0 0);
   @include clippy-border;
 
-  border-bottom: none;
-  border-radius: var(--clippy-radius) var(--clippy-radius) 0 0;
+  --clippy-radius: 40px;
+
+  border-bottom: 0;
   height: 80px;
   margin: 35px auto;
   width: 40px;
@@ -39,14 +39,14 @@
   }
 
   .eye {
+    @include border-radius(50%);
     @include clippy-border(10px);
-    
+
     background: var(--card-color);
-    border-radius: 50%;
-    border-right-color: transparent;
-    border-left-color: transparent;
     border-bottom-color: transparent;
     border-bottom-width: 2px;
+    border-left-color: transparent;
+    border-right-color: transparent;
     height: 29px;
     position: absolute;
     top: 62px;
@@ -64,9 +64,10 @@
   }
 
   &::before {
+    @include border-radius(50%);
+
     animation: blinkEye 2.5s infinite ease-in-out;
     background: var(--clippy-color);
-    border-radius: 50%;
     content: '';
     height: 0;
     left: 9px;
@@ -76,9 +77,9 @@
   }
 
   &::after {
+    @include border-radius(50%);
     @include clippy-border(10px);
 
-    border-radius: 50%;
     content: '';
     height: 15px;
     margin-top: 6px;
