@@ -1,86 +1,60 @@
-@import 'mixins';
-@import 'animations';
+@import 'variables';
+@import 'main/mixins';
 
 :root {
-  --clippy-color: #4c4c4c;
-  --card-color: whitesmoke;
+  --fg-color: #{$dark-gray};
 }
 
-.card {
-  @include card-shadow;
-
-  background: var(--card-color);
-  height: 240px;
-  left: calc(50% - 100px);
-  top: calc(50% - 120px);
-  position: absolute;
-  width: 200px;
+body {
+  background: $whitesmoke;
 }
 
-.clippy {
-  --clippy-radius: 40px;
+ul {
+  list-style: none;
+  
+  li {
+    border-bottom: solid 10px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 60px;
+    padding-bottom: 15px;
+    transition: border-bottom .5s ease-in-out;
 
-  @include clippy-border;
+    &.bone,
+    &.gray-blue,
+    &.dark-blue {
+      @include bouncing-timing;
+    }
 
-  border-bottom: none;
-  border-radius: var(--clippy-radius) var(--clippy-radius) 0 0;
-  height: 80px;
-  margin: 35px auto;
-  width: 40px;
+    &.bone {
+      border-bottom-color: $bone;
+    }
 
-  &::before {
-    @include clippy-ending(80px, 60px, -8px, 120px);
-  }
+    &.creme {
+      border-bottom-color: $creme;
+    }
 
-  &::after {
-    @include clippy-ending(44px, 20px, 12px, 120px);
-  }
+    &.gray-blue {
+      border-bottom-color: $gray-blue;
+    }
 
-  .eye {
-    @include clippy-border(10px);
-    
-    background: var(--card-color);
-    border-radius: 50%;
-    border-right-color: transparent;
-    border-left-color: transparent;
-    border-bottom-color: transparent;
-    border-bottom-width: 2px;
-    height: 29px;
-    position: absolute;
-    top: 62px;
-    width: 35px;
-  }
-}
+    &.blue {
+      border-bottom-color: $blue;
+    }
 
-.eye {
-  &.right {
-    @include clippy-eye(rightEye, 99px, 25deg);
-  }
+    &.dark-blue {
+      border-bottom-color: $dark-blue;
+    }
 
-  &.left {
-    @include clippy-eye(leftEye, 45px, -25deg);
-  }
+    &:hover {
+      border-bottom-width: 1px;
+    }
 
-  &::before {
-    animation: blinkEye 2.5s infinite ease-in-out;
-    background: var(--clippy-color);
-    border-radius: 50%;
-    content: '';
-    height: 0;
-    left: 9px;
-    position: absolute;
-    top: 15px;
-    width: 18px;
-  }
-
-  &::after {
-    @include clippy-border(10px);
-
-    border-radius: 50%;
-    content: '';
-    height: 15px;
-    margin-top: 6px;
-    position: absolute;
-    width: 15px;
+    span {
+      font-family: 'Lato', sans-serif;
+      font-size: 82px;
+      font-weight: 300;
+      color: var(--fg-color);
+    }
   }
 }

@@ -1,100 +1,38 @@
-@keyframes leftEye {
-  0%, 60% {
-    transform: rotate(-25deg); }
-  30% {
-    transform: rotate(0deg) translateY(-15%) translateX(5%); } }
-@keyframes rightEye {
-  0%, 60% {
-    transform: rotate(25deg); }
-  30% {
-    transform: rotate(0deg) translateY(-15%) translateX(5%); } }
-@keyframes blinkEye {
-  0%, 75%, 100% {
-    height: 0px; }
-  90% {
-    height: 18px;
-    transform: rotate(-12deg); } }
 :root {
-  --clippy-color: #4c4c4c;
-  --card-color: whitesmoke; }
+  --fg-color: #4c4c4c; }
 
-.card {
-  -moz-box-shadow: 0px 4px 6px -2px var(--clippy-color);
-  -webkit-box-shadow: 0px 4px 6px -2px var(--clippy-color);
-  box-shadow: 0px 4px 6px -2px var(--clippy-color);
-  background: var(--card-color);
-  height: 240px;
-  left: calc(50% - 100px);
-  top: calc(50% - 120px);
-  position: absolute;
-  width: 200px; }
+body {
+  background: whitesmoke; }
 
-.clippy {
-  --clippy-radius: 40px;
-  border: solid 8px var(--clippy-color);
-  border-bottom: none;
-  border-radius: var(--clippy-radius) var(--clippy-radius) 0 0;
-  height: 80px;
-  margin: 35px auto;
-  width: 40px; }
-  .clippy::before {
-    border: solid 8px var(--clippy-color);
-    border-top: none;
-    border-radius: 0 0 var(--clippy-radius) var(--clippy-radius);
-    content: '';
-    position: absolute;
-    height: 80px;
-    margin-left: -8px;
-    top: 120px;
-    width: 60px; }
-  .clippy::after {
-    border: solid 8px var(--clippy-color);
-    border-top: none;
-    border-radius: 0 0 var(--clippy-radius) var(--clippy-radius);
-    content: '';
-    position: absolute;
-    height: 44px;
-    margin-left: 12px;
-    top: 120px;
-    width: 20px; }
-  .clippy .eye {
-    border: solid 10px var(--clippy-color);
-    background: var(--card-color);
-    border-radius: 50%;
-    border-right-color: transparent;
-    border-left-color: transparent;
-    border-bottom-color: transparent;
-    border-bottom-width: 2px;
-    height: 29px;
-    position: absolute;
-    top: 62px;
-    width: 35px; }
-
-.eye.right {
-  transform: rotate(25deg);
-  animation: rightEye 2.5s infinite ease-in-out;
-  left: 99px; }
-.eye.left {
-  transform: rotate(-25deg);
-  animation: leftEye 2.5s infinite ease-in-out;
-  left: 45px; }
-.eye::before {
-  animation: blinkEye 2.5s infinite ease-in-out;
-  background: var(--clippy-color);
-  border-radius: 50%;
-  content: '';
-  height: 0;
-  left: 9px;
-  position: absolute;
-  top: 15px;
-  width: 18px; }
-.eye::after {
-  border: solid 10px var(--clippy-color);
-  border-radius: 50%;
-  content: '';
-  height: 15px;
-  margin-top: 6px;
-  position: absolute;
-  width: 15px; }
+ul {
+  list-style: none; }
+  ul li {
+    border-bottom: solid 10px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 60px;
+    padding-bottom: 15px;
+    transition: border-bottom .5s ease-in-out; }
+    ul li.bone, ul li.gray-blue, ul li.dark-blue {
+      -moz-transition-timing-function: cubic-bezier(0.1, -1.6, 0.2, 0);
+      -webkit-transition-timing-function: cubic-bezier(0.1, -1.6, 0.2, 0);
+      transition-timing-function: cubic-bezier(0.1, -1.6, 0.2, 0); }
+    ul li.bone {
+      border-bottom-color: #fcfff5; }
+    ul li.creme {
+      border-bottom-color: #d1dbbd; }
+    ul li.gray-blue {
+      border-bottom-color: #91aa9d; }
+    ul li.blue {
+      border-bottom-color: #3e606f; }
+    ul li.dark-blue {
+      border-bottom-color: #193441; }
+    ul li:hover {
+      border-bottom-width: 1px; }
+    ul li span {
+      font-family: 'Lato', sans-serif;
+      font-size: 82px;
+      font-weight: 300;
+      color: var(--fg-color); }
 
 /*# sourceMappingURL=main.css.map */
