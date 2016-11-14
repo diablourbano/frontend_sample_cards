@@ -1,3 +1,8 @@
+@keyframes bouncin-x {
+  0%, 100% {
+    transform: scale(1); }
+  60% {
+    transform: scale(0); } }
 :root {
   --card-color: #4c4c4c;
   --margin-between-cards: 5px; }
@@ -13,7 +18,7 @@ body {
     justify-content: center;
     margin: 100px auto 0;
     padding: var(--margin-between-cards);
-    width: 40%; }
+    width: 38%; }
 
 .card {
   box-shadow: 0 4px 6px -2px #4c4c4c;
@@ -21,12 +26,98 @@ body {
   box-sizing: border-box;
   cursor: pointer;
   margin: var(--margin-between-cards);
-  padding: 50px; }
-  .card .line {
-    background: #fff;
-    display: block;
-    height: 5px;
-    margin: 10px auto;
-    width: 50px; }
+  padding: 50px;
+  text-align: center; }
+
+.hamburger .line {
+  background: #fff;
+  display: block;
+  height: 5px;
+  margin: 8px auto;
+  transition: all .5s ease-in-out;
+  width: 50px; }
+.hamburger.x-men::before {
+  border-radius: 50%;
+  border: solid 5px #fff;
+  content: '';
+  height: 60px;
+  margin-left: -35px;
+  margin-top: -11px;
+  opacity: 0;
+  position: absolute;
+  transition: opacity .8s ease-in-out;
+  width: 60px; }
+
+.hamburger:hover .line:first-child,
+.hamburger:hover .line:last-child {
+  transition: transform .5s ease-in-out; }
+.hamburger:hover.multiply .line:nth-child(2) {
+  opacity: 0;
+  transition: opacity .5s ease-in-out; }
+.hamburger:hover.multiply .line:first-child {
+  transform: translateY(13px) rotate(-45deg); }
+.hamburger:hover.multiply .line:last-child {
+  transform: translateY(-13px) rotate(45deg); }
+.hamburger:hover.minus .line:first-child {
+  transform: translateY(13px); }
+.hamburger:hover.minus .line:last-child {
+  transform: translateY(-13px); }
+.hamburger:hover.arrow.left .line:first-child {
+  transform: translate(5px, -5px) rotate(45deg); }
+.hamburger:hover.arrow.left .line:last-child {
+  transform: translate(5px, 5px) rotate(-45deg); }
+.hamburger:hover.arrow.right .line:first-child {
+  transform: translate(-5px, -5px) rotate(-45deg); }
+.hamburger:hover.arrow.right .line:last-child {
+  transform: translate(-5px, 5px) rotate(45deg); }
+.hamburger:hover.go-down .line:nth-child(2) {
+  opacity: 0;
+  transition: opacity .5s ease-in-out; }
+.hamburger:hover.go-down .line:first-child {
+  transform: translate(-16px, 15px) rotate(45deg); }
+.hamburger:hover.go-down .line:last-child {
+  transform: translate(16px, -11px) rotate(-45deg); }
+.hamburger:hover.rotate-multiply .sign-container {
+  transform: rotate(45deg);
+  transition: transform .5s ease-in-out 1s; }
+.hamburger:hover.rotate-multiply .line:first-child,
+.hamburger:hover.rotate-multiply .line:last-child {
+  transition-delay: .5s; }
+.hamburger:hover.rotate-multiply .line:nth-child(2) {
+  transform: scaleX(0);
+  transition: transform .5s ease-in-out; }
+.hamburger:hover.rotate-multiply .line:first-child {
+  transform: translateY(13px); }
+.hamburger:hover.rotate-multiply .line:last-child {
+  transform: translateY(-13px) rotate(90deg); }
+.hamburger:hover.incline-stairs .sign-container {
+  transform: rotate(35deg);
+  transform-origin: bottom center;
+  transition: transform .5s ease-in-out 1s; }
+.hamburger:hover.incline-stairs .line {
+  transform-origin: left;
+  transition: transform .5s ease-in-out; }
+  .hamburger:hover.incline-stairs .line:first-child {
+    transform: scaleX(0.4); }
+  .hamburger:hover.incline-stairs .line:nth-child(2) {
+    transform: scaleX(0.6); }
+  .hamburger:hover.incline-stairs .line:last-child {
+    transform: scaleX(0.8); }
+.hamburger:hover.x-men::before {
+  opacity: 1; }
+.hamburger:hover.x-men .line:first-child,
+.hamburger:hover.x-men .line:last-child {
+  width: 35px; }
+.hamburger:hover.x-men .line:nth-child(2) {
+  opacity: 0;
+  transition: opacity .3s ease-in-out; }
+.hamburger:hover.x-men .line:first-child {
+  transform: translateY(13px) rotate(45deg); }
+.hamburger:hover.x-men .line:last-child {
+  transform: translateY(-13px) rotate(135deg); }
+.hamburger:hover.bouncin-x.multiply .sign-container {
+  animation: bouncin-x 1.6s ease-in-out forwards; }
+  .hamburger:hover.bouncin-x.multiply .sign-container .line {
+    transition-delay: .6s; }
 
 /*# sourceMappingURL=hamburgers.css.map */

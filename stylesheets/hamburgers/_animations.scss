@@ -1,0 +1,9 @@
+@keyframes bouncin-x {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  60% {
+    transform: scale(0);
+  }
+}
